@@ -1,3 +1,5 @@
+# user interface for cluster analysis learning module
+
 ui = navbarPage("AC 3.0: Cluster Analysis",
                 theme = shinytheme("journal"),
                 header = tags$head(
