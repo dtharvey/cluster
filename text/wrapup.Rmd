@@ -39,3 +39,7 @@ For another introduction to PCA see Chapter 11.2 and 11.5in [Chemometrics Using 
 Another useful resource is *Chemometrics: A Practical Guide* by Kenneth R. Beebe, Randy J. Pell and Mary Beth Seasholtz. Wiley, New York, 1998. ISBN 0-471-12451-6.
 
 B.G.M. Vandeginste, D.L.Massart, L.M.C. Buydens, S. DeJong, P.J. Lewi, J. Smeyers-Verbeke, **Handbook of Chemometrics and Qualimetrics: Part B**, Chapter 30, Elsevier, Amsterdam, 1998.
+
+D.T. Larose and C.D. Larose **Discovering Knowledge in Data: An Introduction to Data Mining**, 2nd. Edition, Chapter 7, Wiley, Hoboken, NJ, 2014.
+
+G. James, D. Witten, T. Hastie, and R. Tibshirani **An Introduction to Statistical Learning: With Applications in R**, Chapter 10.3, Springer, New York, 2013.
