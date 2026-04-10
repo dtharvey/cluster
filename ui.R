@@ -52,27 +52,7 @@ ui = navbarPage("AC 3.0: Cluster Analysis",
                  height = "600px",
                  onclick = "Shiny.setInputValue('img_click',Math.random())"
                ),
-               # tags$img(
-               #   id = "img5",
-               #   src = "intro5.png",
-               #   style = "display: none; cursor: pointer;",
-               #   height = "600px",
-               #   onclick = "Shiny.setInputValue('img_click',Math.random())"
-               # ),
-               # tags$img(
-               #   id = "img6",
-               #   src = "intro6.png",
-               #   style = "display: none; cursor: pointer;",
-               #   height = "600px",
-               #   onclick = "Shiny.setInputValue('img_click',Math.random())"
-               # ),
-               # tags$img(
-               #   id = "img7",
-               #   src = "intro7.png",
-               #   style = "display: none; cursor: pointer;",
-               #   height = "600px",
-               #   onclick = "Shiny.setInputValue('img_click',Math.random())"
-               # ),
+               
              )
               ))),
                 
