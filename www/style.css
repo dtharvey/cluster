@@ -1,0 +1,62 @@
+html-fragment{
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  font-weight: bold;
+}
+
+.scrollable-well{
+  height: 600px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* Shrink font sizes inside Shiny sliders */
+.irs,
+.irs-line,
+.irs-bar,
+.irs-from,
+.irs-to,
+.irs-single,
+.irs-grid-text,
+.irs-min,
+.irs-max,
+.irs-grid {
+  font-size: 11px !important;
+}
+
+/* Shrink font size of slider labels (titles) */
+div.form-group > label.control-label {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'Arial', sans-serif;
+}
+
+#rgb {
+      width: 125px;
+      font-family: Arial, sans-serif;
+    }
+
+#distance {
+      width: 125px;
+      font-family: Arial, sans-serif;
+    }
+
+/* Example CSS for footnotes */
+    .footnote-ref {
+      font-size: 0.8em; /* Smaller reference number */
+      color: blue; /* Blue reference number */
+    }
+
+    .footnotes {
+      font-size: 0.9em; /* Slightly smaller footnote text */
+      text-align: justify; /* Justify footnote text */
+      border-top: 3px solid #ccc; /* Add a top border */
+      padding-top: 10px;
+    }
+
+    .footnote p {
+      margin-bottom: 5px; /* Spacing between footnotes */
+    }

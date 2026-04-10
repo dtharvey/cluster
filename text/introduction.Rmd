@@ -1,0 +1,11 @@
+---
+title: "introduction"
+output: html_fragment
+---
+$\require{mhchem}$ A cluster analysis is an unsupervised machine learning algorithm that groups together samples whose properties are similar to each other, forming them into clusters that are, themselves, more or less similar to other samples or clusters of samples. There are several algorithms that are used for cluster analysis. In this module we will consider just one of these algorithms: hierarchical cluster analysis.
+
+#### A Simple Cluster Analysis Example
+
+The figure on the right shows a small data set of six samples, each defined by its values for the variables $a$ and $b$. In the first step of a cluster analysis we determine the **similarity** between individual samples and identify the pair of samples that are most similar to each other. Based on their similarity, we replace (**agglomerate**) the two individual samples with a cluster of size two. The cluster analysis ends when all samples form a single cluster that shows the **linkage** between individual samples. For simplicity, we will complete the cluster analysis of these samples visually and return, on later tabs, to more formal definitions of similarity, agglomeration, and linkage. Click on the figure on the right as you step through the cluster analysis.
+
+A cluster analysis has $n-1$ steps where $n$ is the number of samples. The first step begins with the individual samples 1, 2, 3, 4, 5, 6. The two samples that are most similar---that is, nearest to each other in space---are 3 and 4, which form the cluster defined by the orange oval. The second step begins with samples 1, 2, 5, and 6, and the cluster of 3 and 4. The two samples and/or clusters that are most similar to each other are 2 and 6, which form the cluster defined by the light blue oval. The third step begins with samples 1 and 5, and the clusters of 3 and 4, and of 2 and 6. The two samples and/or clusters that are most similar to each other are the clusters of 3 and 4, and of 2 and 6, which form the cluster defined by the green oval. The similarity of samples 1 and 5 to each other and to the cluster of samples 2, 3, 4, and 6 is not clear from this simple visual approach.

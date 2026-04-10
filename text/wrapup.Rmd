@@ -1,0 +1,41 @@
+---
+title: "wrapup"
+output: html_fragment
+---
+#### Different Forms of Cluster Analysis
+
+In the introduction we noted that there are a variety of clustering algorithms and that this learning module is limited to hierarchical cluster analysis in which the clustering appears in the form of a dendrogram. Other algorithms include K-means, in which clustering is based on the distance between samples and a set of randomly selected centroids, density-based clustering that is based on identifying areas with a high density of samples, and distribution-based clustering that is based on probabilities. 
+
+#### Cluster Analysis of Multidimensional Data Sets
+
+The data in this learning module consisted of measurements for two variables, $a$ and $b$, on six samples. Although the use of more samples is helpful in identifying meaningful clusters, of greater importance is the use of more variables, which allows for the discovery of additional factors that affect the similarity of samples to each other. 
+
+The data on the right shows a cluster analysis for the visible absorbance spectra of 24 samples measured at 16 wavelengths. The samples include stock solutions of three metal ions, $\ce{Cu^{2+}}$, $\ce{Co^{2+}}$, and $\ce{Cr^{3+}}$, and binary and ternary mixtures of these stock solutions; the sample numbers appear as the dendrogram's leaves. The visible spectra of the metals ions appear on the right.
+
+The structure of the dendrogram is consistent with what we know about these samples. The height of the final cluster, which includes all 24 samples, is substantially removed from the three clusters that make up the next level of clusters. Within these three clusters are three samples---numbers 1, 2, and 3---that link to all, which suggests these samples are the stock solutions. Samples 1 is likely $\ce{Cu^{2+}}$ as its spectrum shows that it absorbs strongly at wavelengths quite different than that for $\ce{Co^{2+}}$ and $\ce{Cr^{3+}}$.
+
+#### Distance Calculations When Using More Than Two Variables
+
+Suppose we have a system in which we report four measurements on each sample. The Euclidean distance between any two points, $d(P,Q)$ is given by simply adding additional terms to the equation from the Similarity tab; thus
+
+$$\text{Euclidean: }d(P,Q) = \sqrt{(a_2 - a_1)^2 + (b_2 - b_1)^2 + (c_2 - c_1)^2 + (d_2 - d_1)^2}$$
+
+In the same way, the Manhattan distance becomes
+
+$$\text{Manhattan: }d(P,Q) = \sqrt{|a_2 - a_1| + |b_2 - b_1| + |c2 - c_1| + |d_2 - d_1|}$$
+
+#### Using R for a Cluster Analysis
+
+A hierarchical cluster analysis---the focus of this learning module---uses the `hclust` function from the stats package (and which is available whenever you are running `R`). The general form of the function is 
+<center>`hclust(d, method = "complete")`</center>
+&nbsp;where `method` is the form of agglomeration to use, and where `d` is a similarity matrix. The dendrogram is created by passing to the `plot` function an object created using `hclust`. The similarity matrix is created using the `dist` function (also available whenever you are using `R`). The general form of the function is
+<center>`dist(x, method = "euclidean")`</center> 
+&nbsp;where `method` determines how distances are calculated.The `plot` function takes an object created using `hclust` and returns the dendrogram. The package `dendextend`, available from [https://cran.r-project.org/package=dendextend](CRAN), provides additional function for creating dendrograms.
+
+#### Additional Resources
+
+For another introduction to PCA see Chapter 11.2 and 11.5in [Chemometrics Using R](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)), which is available through the [LibreText Project](https://libretexts.org/).
+
+Another useful resource is *Chemometrics: A Practical Guide* by Kenneth R. Beebe, Randy J. Pell and Mary Beth Seasholtz. Wiley, New York, 1998. ISBN 0-471-12451-6.
+
+B.G.M. Vandeginste, D.L.Massart, L.M.C. Buydens, S. DeJong, P.J. Lewi, J. Smeyers-Verbeke, **Handbook of Chemometrics and Qualimetrics: Part B**, Chapter 30, Elsevier, Amsterdam, 1998.

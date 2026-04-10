@@ -1,0 +1,14 @@
+---
+title: "activity3"
+output: html_fragment
+---
+
+The list of clusters and distances on the previous tab falls short of a presentation that is easy to interpret, particularly if there are hundreds of samples instead of our small set of six samples. A more effective representation of a cluster analysis is the figure on the right, which is called a dendrogram.
+
+The bottom of the dendrogram is defined by the individual samples---in this case using the sample numbers 1 through 6---ordered in a way that locates similar samples near each other. The individual samples, also known as leaves, generally are equally spaced from each other. Rising upwards from each leaf is a vertical line---called a branch---that extends to a height (distance) equal to its first appearance in a cluster; thus the branches that begin with samples 3 and 4 end at a height of 0.26, the distance between samples 3 and 4. A horizontal line connects these samples, identifying the first cluster. The cluster of samples 2 and 6 is defined in the same way with a height of 0.36. Vertical lines extend from the horizontal lines for these two clusters, each rising to a height of 1.04 and linking together the first two clusters.
+
+**Exercise 1**. The slider labeled "number of clusters" imposes on the dendrogram a structure determined by the number of clusters to consider; thus, a value of 2 divides the dendrogram into two clusters highlighted by the dashed green lines. For six samples, the number of clusters must be in the range 2--5. Why are the values 1 and 6 excluded?
+
+**Exercise 2**. On the previous tab you discovered that how samples 1 and 5 cluster with the other four samples depends on the agglomeration method. Examine all permutations of agglomeration methods and distance methods and comment on how the structure of the dendrograms show the same trend.
+
+**Exercise 3**. Consider the effects of similarity, agglomeration, and linkage on the structure of the cluster diagram relative to samples 1 and 5. Which set of conditions do you think best represents the data in this data set?

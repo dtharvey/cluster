@@ -1,0 +1,18 @@
+---
+title: "activity1"
+output: html_fragment
+---
+
+The table on the upper right shows values of two measurements ($a$ and $b$) for each of six samples (1--6); this is the same data from the introduction. The first step in a cluster analysis is to determine the distance between each pair of samples as a measure of similarity. Two common measures of distance are the Euclidean distance and the Manhattan distance 
+$$\text{Euclidean: }d(P,Q) = \sqrt{(a_2 - a_1)^2 + (b_2 - b_1)^2} \quad \text{Manhattan: }d(P,Q) = \sqrt{|a_2 - a_1| + |b_2 - b_1|}$$
+where $d(P,Q)$ is the distance between samples $P$ and $Q$, and $a_1$, $a_2$, $b_1$, and $b_2$ are their measured values. For example, the Euclidean distance between the third and the sixth samples is $$d(P,Q) = \sqrt{(-1.90 - (-0.90))^2 + (-(-0.17) -(-0.12))^2} = 1.04$$
+
+**Exercise 1**. The similarity matrix on the lower right gives the Euclidean distances between samples. Explain why the diagonal values from upper-left to lower-right are all zero.
+
+**Exorcise 2**. The values in the similarity matrix show symmetry. Describe this symmetry and explain why it is present.
+
+**Exercise 3**. Explain why the equations for Euclidean and Manhattan distances make sense.
+
+**Exercise 4**. Identify the pair of samples that are closest to each other and show that the distance between them agrees with the values in the similarity matrix. Repeat for the pair of samples that are furthest apart.
+
+**Exercise 5**. Use the radio button to display the similarity matrix using Manhattan distances. What do you notice about these values when compared to the values in the similarity matrix using Euclidean distances?

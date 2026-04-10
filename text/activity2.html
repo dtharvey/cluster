@@ -1,0 +1,33 @@
+
+
+
+<p>For the first step in a cluster analysis, each sample is its own
+entity and calculating the similarity matrix is straight-forward. Once
+we form a cluster, however, its distance from other samples and clusters
+becomes unclear.</p>
+<p>The four figures on the upper right illustrates the problem. Each
+figure shows an identical set of two clusters, one with three samples
+(in blue) and one with two samples (in green). The distance between
+these clusters is defined in terms of the individual samples that make
+up each cluster, a process called agglomeration. There are many
+agglomeration methods, three of which are shown here: single, where
+similarity is the smallest distance between the samples in the two
+clusters; complete, where similarity is the greatest distance between
+the samples in the two clusters; average, where similarity is the
+average of all possible distances between the samples in the two
+clusters; and centroid, where similarity is the distance between the
+centroid—the small, black circle—for each cluster.</p>
+<p>Two sets of radio buttons allow you to define how distance is
+calculated and how clusters are agglomerated. Below the radio buttons is
+a list that shows the progress of the cluster analysis, The samples that
+comprise a cluster appear within curly braces; thus {3,4} is a cluster
+of samples 3 and 4, and {2,3,4,6} is a cluster of samples 2, 3, 4, and
+6. For each step the distance between the clusters is given.</p>
+<p><strong>Exercise 1</strong>. Set the radio buttons to Euclidean and
+single and verify that the order of clustering and the distance values
+are correct. The similarity matrix on the Agglomeration tab were
+calculated using Euclidean distances and single agglomeration.</p>
+<p><strong>Exercise 2</strong>. Examine all permutations of
+agglomeration methods and distance methods and comment on any trends you
+see in the results. Why is the clustering of samples 1 and 5 different
+for complete agglomeration?</p>

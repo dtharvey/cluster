@@ -1,0 +1,83 @@
+
+
+
+<div id="different-forms-of-cluster-analysis" class="section level4">
+<h4>Different Forms of Cluster Analysis</h4>
+<p>In the introduction we noted that there are a variety of clustering
+algorithms and that this learning module is limited to hierarchical
+cluster analysis in which the clustering appears in the form of a
+dendrogram. Other algorithms include K-means, in which clustering is
+based on the distance between samples and a set of randomly selected
+centroids, density-based clustering that is based on identifying areas
+with a high density of samples, and distribution-based clustering that
+is based on probabilities.</p>
+</div>
+<div id="cluster-analysis-of-multidimensional-data-sets" class="section level4">
+<h4>Cluster Analysis of Multidimensional Data Sets</h4>
+<p>The data in this learning module consisted of measurements for two
+variables, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, on six samples. Although the use of
+more samples is helpful in identifying meaningful clusters, of greater
+importance is the use of more variables, which allows for the discovery
+of additional factors that affect the similarity of samples to each
+other.</p>
+<p>The data on the right shows a cluster analysis for the visible
+absorbance spectra of 24 samples measured at 16 wavelengths. The samples
+include stock solutions of three metal ions, <span class="math inline">\(\ce{Cu^{2+}}\)</span>, <span class="math inline">\(\ce{Co^{2+}}\)</span>, and <span class="math inline">\(\ce{Cr^{3+}}\)</span>, and binary and ternary
+mixtures of these stock solutions; the sample numbers appear as the
+dendrogram’s leaves. The visible spectra of the metals ions appear on
+the right.</p>
+<p>The structure of the dendrogram is consistent with what we know about
+these samples. The height of the final cluster, which includes all 24
+samples, is substantially removed from the three clusters that make up
+the next level of clusters. Within these three clusters are three
+samples—numbers 1, 2, and 3—that link to all, which suggests these
+samples are the stock solutions. Samples 1 is likely <span class="math inline">\(\ce{Cu^{2+}}\)</span> as its spectrum shows that
+it absorbs strongly at wavelengths quite different than that for <span class="math inline">\(\ce{Co^{2+}}\)</span> and <span class="math inline">\(\ce{Cr^{3+}}\)</span>.</p>
+</div>
+<div id="distance-calculations-when-using-more-than-two-variables" class="section level4">
+<h4>Distance Calculations When Using More Than Two Variables</h4>
+<p>Suppose we have a system in which we report four measurements on each
+sample. The Euclidean distance between any two points, <span class="math inline">\(d(P,Q)\)</span> is given by simply adding
+additional terms to the equation from the Similarity tab; thus</p>
+<p><span class="math display">\[\text{Euclidean: }d(P,Q) = \sqrt{(a_2 -
+a_1)^2 + (b_2 - b_1)^2 + (c_2 - c_1)^2 + (d_2 - d_1)^2}\]</span></p>
+<p>In the same way, the Manhattan distance becomes</p>
+<p><span class="math display">\[\text{Manhattan: }d(P,Q) = \sqrt{|a_2 -
+a_1| + |b_2 - b_1| + |c2 - c_1| + |d_2 - d_1|}\]</span></p>
+</div>
+<div id="using-r-for-a-cluster-analysis" class="section level4">
+<h4>Using R for a Cluster Analysis</h4>
+A hierarchical cluster analysis—the focus of this learning module—uses
+the <code>hclust</code> function from the stats package (and which is
+available whenever you are running <code>R</code>). The general form of
+the function is
+<center>
+<code>hclust(d, method = &quot;complete&quot;)</code>
+</center>
+ where <code>method</code> is the form of agglomeration to use, and
+where <code>d</code> is a similarity matrix. The dendrogram is created
+by passing to the <code>plot</code> function an object created using
+<code>hclust</code>. The similarity matrix is created using the
+<code>dist</code> function (also available whenever you are using
+<code>R</code>). The general form of the function is
+<center>
+<code>dist(x, method = &quot;euclidean&quot;)</code>
+</center>
+<p> where <code>method</code> determines how distances are
+calculated.The <code>plot</code> function takes an object created using
+<code>hclust</code> and returns the dendrogram. The package
+<code>dendextend</code>, available from <a href="CRAN">https://cran.r-project.org/package=dendextend</a>, provides
+additional function for creating dendrograms.</p>
+</div>
+<div id="additional-resources" class="section level4">
+<h4>Additional Resources</h4>
+<p>For another introduction to PCA see Chapter 11.2 and 11.5in <a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)">Chemometrics
+Using R</a>, which is available through the <a href="https://libretexts.org/">LibreText Project</a>.</p>
+<p>Another useful resource is <em>Chemometrics: A Practical Guide</em>
+by Kenneth R. Beebe, Randy J. Pell and Mary Beth Seasholtz. Wiley, New
+York, 1998. ISBN 0-471-12451-6.</p>
+<p>B.G.M. Vandeginste, D.L.Massart, L.M.C. Buydens, S. DeJong, P.J.
+Lewi, J. Smeyers-Verbeke, <strong>Handbook of Chemometrics and
+Qualimetrics: Part B</strong>, Chapter 30, Elsevier, Amsterdam,
+1998.</p>
+</div>
